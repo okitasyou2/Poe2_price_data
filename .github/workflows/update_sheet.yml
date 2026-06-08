@@ -1,12 +1,8 @@
 name: Update PoE2 Ninja Prices
 
-# 30분 마다 실행 & 수동 실행 허용 (GitHub 지연을 피하기 위해 17분, 47분에 실행)
+# 외부 스케줄러(cron-job.org) 연동으로 인한 자동 스케줄 삭제. 수동 실행만 허용.
 on:
-  schedule:
-    # 분 시 일 월 요일 (UTC 기준)
-    # 크론식으로 표현
-    - cron: '17,47 * * * *'
-  workflow_dispatch: # 깃허브 페이지에서 버튼으로 수동 실행할 수 있게 함
+  workflow_dispatch: # 깃허브 페이지에서 버튼으로 수동 실행 (또는 외부 API 호출)할 수 있게 함
 
 jobs:
   run-bot:
