@@ -10,6 +10,8 @@ on:
 jobs:
   update-dictionary:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
       - name: 저장소 코드 가져오기
