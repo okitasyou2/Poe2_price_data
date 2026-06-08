@@ -31,7 +31,7 @@ jobs:
       - name: 닌자 시세 봇 실행 (Run ninja bot)
         env:
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
-        run: python poe2_ninja_detail_bot.py
+        run: python -u poe2_ninja_detail_bot.py
         
       - name: 변경된 로컬 파일 깃허브 저장소에 반영 (Commit & Push)
         run: |
