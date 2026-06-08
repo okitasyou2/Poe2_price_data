@@ -99,12 +99,25 @@ async def main():
             tasks_uniques = [fetch_individual_unique(session, u) for u in uniques]
             await asyncio.gather(*tasks_uniques)
             
-    # 최종 수집된 딕셔너리를 JSON 파일로 저장
+    # 최종 수집된 딕셔너리를 기존 JSON 파일과 병합하여 저장
     output_file = os.path.join(current_dir, "poe2_kr_translation_dict.json")
+    
+    combined_dict = {}
+    if os.path.exists(output_file):
+        try:
+            with open(output_file, "r", encoding="utf-8") as f:
+                combined_dict = json.load(f)
+            print(f"기존 번역 사전({len(combined_dict)}개)을 불러와 병합합니다...")
+        except Exception as e:
+            print(f"기존 사전 불러오기 실패: {e}")
+            
+    # 새로 수집한 아이템 번역 데이터로 업데이트 (패시브 등 기존 데이터 유지)
+    combined_dict.update(dictionary)
+    
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(dictionary, f, ensure_ascii=False, indent=2)
+        json.dump(combined_dict, f, ensure_ascii=False, indent=2)
         
-    print(f"완료! 총 {len(dictionary)}개의 번역 데이터가 '{output_file}' 파일로 저장되었습니다.")
+    print(f"완료! 총 {len(combined_dict)}개의 누적 번역 데이터가 '{output_file}' 파일로 저장되었습니다.")
 
 if __name__ == "__main__":
     asyncio.run(main())
