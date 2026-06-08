@@ -121,4 +121,7 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-    input("종료하려면 Enter 키를 누르세요...")
+    
+    # 깃허브 액션 환경이 아닐 때만 창이 꺼지는 것을 방지
+    if os.environ.get('GITHUB_ACTIONS') != 'true':
+        input("종료하려면 Enter 키를 누르세요...")
