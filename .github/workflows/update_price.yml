@@ -3,7 +3,7 @@ name: Update PoE2 Base/Unique Prices
 # 2시간 마다 정각에 실행 & 수동 실행 허용
 on:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
