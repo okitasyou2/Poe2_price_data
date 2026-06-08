@@ -30,3 +30,10 @@ jobs:
           TARGET_SHEET_INDEX: '4'  # 5번째 시트 자동 선택
           TARGET_MODE: '1'         # 1번 모드 (일반 베이스 아이템)
         run: python Base_Unique_Price_Update/poe2_price_bot.py
+        
+      - name: 변경된 로컬 파일 깃허브 저장소에 반영 (Commit & Push)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update price JSON/TXT files [skip ci]" && git push)
