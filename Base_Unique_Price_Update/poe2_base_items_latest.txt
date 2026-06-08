@@ -1094,6 +1094,7 @@ Runemastered Hunter Hood
 Runemastered Hunting Shoes
 Runemastered Intricate Crest Shield
 Runemastered Intricate Gloves
+Runemastered Iron Buckler
 Runemastered Iron Crown
 Runemastered Iron Cuirass
 Runemastered Iron Greaves
