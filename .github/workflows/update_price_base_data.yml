@@ -1,0 +1,43 @@
+name: Update PoE2 Base Data for Price Bot
+
+# 하루 한 번(UTC 01:00, 한국시간 오전 10시) 실행 & 수동 실행 허용
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-base-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: 저장소 코드 가져오기
+        uses: actions/checkout@v3
+        
+      - name: 파이썬 설치
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: 패키지 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4
+          
+      - name: 1. 스킬 ID 데이터 업데이트
+        run: python Base_Unique_Price_Update/update_skill_ids.py
+          
+      - name: 2. 아이템-스킬 매핑 데이터 업데이트
+        run: python Base_Unique_Price_Update/auto_poe2db_scraper_skill_item.py
+          
+      - name: 3. 전체 아이템(베이스/유니크) 텍스트 파일 업데이트
+        run: python Base_Unique_Price_Update/get_poe2_all_items.py
+          
+      - name: 4. 변경된 데이터 저장소에 반영 (Commit & Push)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Price Base Data [skip ci]" && git push)

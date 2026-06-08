@@ -1,4 +1,4 @@
-# 공식 홈페이지 거래소 API에서 전체 아이템(베이스, 유니크 등) 목록을 가져와 텍스트 파일로 저장하는 스크립트
+# 공식 홈페이지 거래소 API에서 전체 아이템(베이스, 유니크 등) 목록을 가져와 텍스트 파일로 저장하는 스크립트 , 연동된 코드는 없음, 이걸로 스프레드 시트 업데이트 한번씩 해주면됨
 import urllib.request
 import json
 import os
@@ -63,4 +63,3 @@ def fetch_poe2_items():
 
 if __name__ == "__main__":
     fetch_poe2_items()
-    input("Press Enter to exit...")
