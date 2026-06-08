@@ -2,9 +2,6 @@ name: Update PoE2 Translation Dictionary
 
 # 하루 한 번(자정) 실행 & 수동 실행 허용
 on:
-  schedule:
-    # 매일 UTC 00:00 (한국시간 오전 9시)
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:

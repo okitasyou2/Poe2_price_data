@@ -2,8 +2,6 @@ name: Update PoE2 Base Data for Price Bot
 
 # 하루 한 번(UTC 01:00, 한국시간 오전 10시) 실행 & 수동 실행 허용
 on:
-  schedule:
-    - cron: '0 1 * * *'
   workflow_dispatch:
 
 jobs:
