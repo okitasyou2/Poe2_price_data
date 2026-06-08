@@ -380,16 +380,22 @@ def main():
     print("구글 시트 연동 중...")
     
     import os
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    cred_path = os.path.join(os.path.dirname(base_dir), 'credentials.json')
     
     try:
         scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-        creds = ServiceAccountCredentials.from_json_keyfile_name(cred_path, scope)
+        
+        google_creds_json = os.environ.get('GOOGLE_CREDENTIALS_JSON')
+        if google_creds_json:
+            creds_dict = json.loads(google_creds_json)
+            creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+        else:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            cred_path = os.path.join(os.path.dirname(base_dir), 'credentials.json')
+            creds = ServiceAccountCredentials.from_json_keyfile_name(cred_path, scope)
+            
         client = gspread.authorize(creds)  # type: ignore
     except Exception as e:
-        print(f"\n[오류] credentials.json 파일을 읽을 수 없거나 권한이 없습니다.")
-        print(f"찾으려는 경로: {cred_path}")
+        print(f"\n[오류] 인증 정보를 읽을 수 없거나 권한이 없습니다.")
         print(f"상세오류: {e}")
         return
 
@@ -404,15 +410,21 @@ def main():
     
     # 워크시트 선택
     worksheets = sheet.worksheets()
-    for idx, ws in enumerate(worksheets):
-        print(f"{idx + 1}. {ws.title}")
-        
-    try:
-        sel = int(input("\n작업할 시트 번호를 선택하세요 (예: 1): ")) - 1
-        worksheet = worksheets[sel]
-    except:
-        print("잘못된 입력입니다.")
-        return
+    
+    if os.environ.get('GITHUB_ACTIONS') == 'true':
+        sel_idx = int(os.environ.get('TARGET_SHEET_INDEX', '4'))
+        worksheet = worksheets[sel_idx]
+        print(f"\n[자동화 모드] 시트 [{worksheet.title}] 자동 선택됨")
+    else:
+        for idx, ws in enumerate(worksheets):
+            print(f"{idx + 1}. {ws.title}")
+            
+        try:
+            sel = int(input("\n작업할 시트 번호를 선택하세요 (예: 1): ")) - 1
+            worksheet = worksheets[sel]
+        except:
+            print("잘못된 입력입니다.")
+            return
         
     global exalted_rate
     try:
@@ -424,9 +436,13 @@ def main():
         exalted_rate = None
         print("환산비(A1)를 읽지 못했습니다. Exalted 고정으로 진행합니다.")
         
-    print("\n1. 일반 베이스 아이템 모드 (ilvl 82/81 및 스킬 검색)")
-    print("2. 유니크 아이템 모드 (이름으로 유니크 검색)")
-    mode = input("모드를 선택하세요 (1 또는 2): ").strip()
+    if os.environ.get('GITHUB_ACTIONS') == 'true':
+        mode = os.environ.get('TARGET_MODE', '1')
+        print(f"\n[자동화 모드] 모드 {mode} 자동 선택됨")
+    else:
+        print("\n1. 일반 베이스 아이템 모드 (ilvl 82/81 및 스킬 검색)")
+        print("2. 유니크 아이템 모드 (이름으로 유니크 검색)")
+        mode = input("모드를 선택하세요 (1 또는 2): ").strip()
     
     if mode in ['1', '2']:
         print("\n시트 초기화 중 (G1 시간 업데이트)...")

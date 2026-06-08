@@ -1,0 +1,32 @@
+name: Update PoE2 Base/Unique Prices
+
+# 2시간 마다 정각에 실행 & 수동 실행 허용
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 저장소 코드 가져오기
+        uses: actions/checkout@v3
+        
+      - name: 파이썬 설치
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: 패키지 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: 베이스/유니크 가격 봇 실행
+        env:
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          TARGET_SHEET_INDEX: '4'  # 5번째 시트 자동 선택
+          TARGET_MODE: '1'         # 1번 모드 (일반 베이스 아이템)
+        run: python Base_Unique_Price_Update/poe2_price_bot.py
