@@ -1048,6 +1048,7 @@ Runemastered Covered Sabatons
 Runemastered Covert Hood
 Runemastered Cowled Helm
 Runemastered Crescent Targe
+Runemastered Crucible Tower Shield
 Runemastered Crystal Focus
 Runemastered Cultist Crown
 Runemastered Death Mask
