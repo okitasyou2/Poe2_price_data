@@ -1061,6 +1061,7 @@ Runemastered Emblem Crest Shield
 Runemastered Embossed Boots
 Runemastered Embroidered Gloves
 Runemastered Engraved Focus
+Runemastered Enlightened Robe
 Runemastered Explorer Armour
 Runemastered Exquisite Vest
 Runemastered Face Mask
@@ -1170,6 +1171,7 @@ Runemastered Spiked Buckler
 Runemastered Spined Bracers
 Runemastered Spiral Wraps
 Runemastered Spired Greathelm
+Runemastered Spiritbone Crown
 Runemastered Stacked Sabatons
 Runemastered Steel Plate
 Runemastered Stitched Gloves
