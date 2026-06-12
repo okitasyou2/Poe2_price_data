@@ -1178,6 +1178,7 @@ Runemastered Stitched Gloves
 Runemastered Stocky Mitts
 Runemastered Stone Greaves
 Runemastered Straw Sandals
+Runemastered Strider Vest
 Runemastered Studded Greatclub
 Runemastered Studded Vest
 Runemastered Suede Bracers
