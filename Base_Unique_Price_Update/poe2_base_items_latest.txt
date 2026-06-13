@@ -1025,6 +1025,7 @@ Runemastered Ancestral Mail
 Runemastered Anchorite Garb
 Runemastered Ancient Leggings
 Runemastered Ancient Mail
+Runemastered Ancient Visor
 Runemastered Armoured Cap
 Runemastered Armoured Vest
 Runemastered Array Buckler
