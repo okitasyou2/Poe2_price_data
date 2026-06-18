@@ -69,7 +69,7 @@ def main():
     # 2.5 공식 API에서 실제 아이템 목록을 불러와 더미 데이터 필터링
     print("공식 아이템 API와 대조하여 더미 데이터를 제거합니다...")
     try:
-        items_req = urllib.request.Request('https://poe.game.daum.net/api/trade2/data/items', headers=headers)
+        items_req = urllib.request.Request('https://poe.kakaogames.com/api/trade2/data/items', headers=headers)
         items_res = urllib.request.urlopen(items_req)
         items_data = json.loads(items_res.read().decode('utf-8'))
         

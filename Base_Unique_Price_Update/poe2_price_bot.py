@@ -148,8 +148,8 @@ def make_request(url, method='GET', payload=None):
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
-        'Origin': 'https://poe.game.daum.net',
-        'Referer': f'https://poe.game.daum.net/trade2/search/poe2/{LEAGUE_ENCODED}',
+        'Origin': 'https://poe.kakaogames.com',
+        'Referer': f'https://poe.kakaogames.com/trade2/search/poe2/{LEAGUE_ENCODED}',
         'X-Requested-With': 'XMLHttpRequest',
     }
     if payload:
@@ -186,12 +186,12 @@ def make_request(url, method='GET', payload=None):
 
 def fetch_prices(query_id, data):
     all_ids = data.get('result', [])[:10]
-    final_url = f"https://poe.game.daum.net/trade2/search/poe2/{LEAGUE_ENCODED}/{query_id}"
+    final_url = f"https://poe.kakaogames.com/trade2/search/poe2/{LEAGUE_ENCODED}/{query_id}"
     
     if not all_ids:
         return {"avg": "", "url": final_url, "prices": []}
         
-    fetch_url = f"https://poe.game.daum.net/api/trade2/fetch/{','.join(all_ids)}?query={query_id}&realm=poe2"
+    fetch_url = f"https://poe.kakaogames.com/api/trade2/fetch/{','.join(all_ids)}?query={query_id}&realm=poe2"
     fetch_res = make_request(fetch_url, 'GET')
     
     if not fetch_res:
@@ -233,7 +233,7 @@ def run_query(item_name, ilvl):
         "sort": {"price": "asc"}
     }
     
-    search_url = f'https://poe.game.daum.net/api/trade2/search/poe2/{LEAGUE_ENCODED}'
+    search_url = f'https://poe.kakaogames.com/api/trade2/search/poe2/{LEAGUE_ENCODED}'
     search_res = make_request(search_url, 'POST', payload)
     if not search_res or 'id' not in search_res:
         return None
@@ -257,7 +257,7 @@ def run_skill_min_query(item_name, skill_id, min_val):
         },
         "sort": {"price": "asc"}
     }
-    search_url = f'https://poe.game.daum.net/api/trade2/search/poe2/{LEAGUE_ENCODED}'
+    search_url = f'https://poe.kakaogames.com/api/trade2/search/poe2/{LEAGUE_ENCODED}'
     search_res = make_request(search_url, 'POST', payload)
     if not search_res or 'id' not in search_res:
         return None
@@ -277,7 +277,7 @@ def run_unique_query(item_name):
         },
         "sort": {"price": "asc"}
     }
-    search_url = f'https://poe.game.daum.net/api/trade2/search/poe2/{LEAGUE_ENCODED}'
+    search_url = f'https://poe.kakaogames.com/api/trade2/search/poe2/{LEAGUE_ENCODED}'
     search_res = make_request(search_url, 'POST', payload)
     if not search_res or 'id' not in search_res:
         return None
