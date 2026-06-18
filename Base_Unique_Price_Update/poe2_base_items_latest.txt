@@ -598,6 +598,7 @@ Ruby Ring
 Rugged Cuirass
 Ruination Maul
 Runed Focus
+Runefather's Grasping Mail
 Runeforged Adherent Cuffs
 Runeforged Adherent's Raiment
 Runeforged Adorned Wraps
@@ -624,6 +625,7 @@ Runeforged Baroque Targe
 Runeforged Barricade Tower Shield
 Runeforged Bastion Sabatons
 Runeforged Beaded Circlet
+Runeforged Blacksteel Crest Shield
 Runeforged Blacksteel Gauntlets
 Runeforged Blacksteel Sabatons
 Runeforged Bladeguard Buckler
@@ -687,6 +689,7 @@ Runeforged Death Mail
 Runeforged Death Mantle
 Runeforged Deerstalker Hood
 Runeforged Dekharan Crest Shield
+Runeforged Desert Buckler
 Runeforged Desert Cap
 Runeforged Detailed Mitts
 Runeforged Divine Crown
@@ -738,6 +741,7 @@ Runeforged Frayed Shoes
 Runeforged Freebooter Cap
 Runeforged Full Plate
 Runeforged Fur Plate
+Runeforged Garment
 Runeforged Gauze Wraps
 Runeforged Gladiatorial Helm
 Runeforged Gleaming Cuffs
@@ -746,9 +750,11 @@ Runeforged Gold Circlet
 Runeforged Gold Gloves
 Runeforged Goldcast Cuffs
 Runeforged Golden Mail
+Runeforged Golden Targe
 Runeforged Goldworked Tower Shield
 Runeforged Gothic Quarterstaff
 Runeforged Grand Bracers
+Runeforged Grasping Mail
 Runeforged Grim Gloves
 Runeforged Grinning Mask
 Runeforged Guarded Helm
@@ -917,6 +923,7 @@ Runeforged Slim Mace
 Runeforged Slipstrike Vest
 Runeforged Smuggler Coat
 Runeforged Soaring Mask
+Runeforged Soaring Targe
 Runeforged Soldier Cuirass
 Runeforged Soldier Greathelm
 Runeforged Solid Mask
@@ -1025,12 +1032,16 @@ Runemastered Ancestral Mail
 Runemastered Anchorite Garb
 Runemastered Ancient Leggings
 Runemastered Ancient Mail
+Runemastered Ancient Visor
+Runemastered Antler Focus
 Runemastered Armoured Cap
 Runemastered Armoured Vest
 Runemastered Array Buckler
+Runemastered Assassin Garb
 Runemastered Barricade Tower Shield
 Runemastered Beaded Circlet
 Runemastered Blacksteel Tower Shield
+Runemastered Blazon Crest Shield
 Runemastered Bolstered Mitts
 Runemastered Bone Raiment
 Runemastered Braced Sabatons
@@ -1039,14 +1050,17 @@ Runemastered Brimmed Helm
 Runemastered Bronze Greaves
 Runemastered Burnished Gauntlets
 Runemastered Chain Mail
+Runemastered Chain Tiara
 Runemastered Cinched Boots
 Runemastered Cleric Vestments
 Runemastered Cloaked Mail
 Runemastered Corsair Cap
+Runemastered Corvus Mantle
 Runemastered Covered Sabatons
 Runemastered Covert Hood
 Runemastered Cowled Helm
 Runemastered Crescent Targe
+Runemastered Crucible Tower Shield
 Runemastered Crystal Focus
 Runemastered Cultist Crown
 Runemastered Death Mask
@@ -1059,12 +1073,14 @@ Runemastered Emblem Crest Shield
 Runemastered Embossed Boots
 Runemastered Embroidered Gloves
 Runemastered Engraved Focus
+Runemastered Enlightened Robe
 Runemastered Explorer Armour
 Runemastered Exquisite Vest
 Runemastered Face Mask
 Runemastered Familial Talisman
 Runemastered Feathered Robe
 Runemastered Feathered Sandals
+Runemastered Feathered Tiara
 Runemastered Felled Greatclub
 Runemastered Felt Cap
 Runemastered Fierce Greathelm
@@ -1074,15 +1090,20 @@ Runemastered Full Plate
 Runemastered Furtive Wraps
 Runemastered Gauze Wraps
 Runemastered Gilded Vestments
+Runemastered Glacial Fortress
 Runemastered Gold Circlet
 Runemastered Goldcast Cuffs
 Runemastered Gothic Quarterstaff
+Runemastered Grand Cuisses
 Runemastered Grand Manchettes
 Runemastered Grand Regalia
+Runemastered Grand Visage
+Runemastered Grasping Mail
 Runemastered Guarded Helm
 Runemastered Hardwood Targe
 Runemastered Havoc Raiment
 Runemastered Heavy Belt
+Runemastered Heavy Crown
 Runemastered Heraldric Tower Shield
 Runemastered Hermit Garb
 Runemastered Heroic Armour
@@ -1114,6 +1135,7 @@ Runemastered Leatherbound Hood
 Runemastered Linen Wraps
 Runemastered Lizardscale Boots
 Runemastered Long Quarterstaff
+Runemastered Magus Tiara
 Runemastered Mail Sabatons
 Runemastered Mail Vestments
 Runemastered Marabout Garb
@@ -1136,6 +1158,7 @@ Runemastered Plumed Focus
 Runemastered Primal Markings
 Runemastered Quilted Vest
 Runemastered Rampart Tower Shield
+Runemastered Revered Vestments
 Runemastered Rhoahide Coat
 Runemastered Ridged Buckler
 Runemastered Ringmail Gauntlets
@@ -1149,6 +1172,7 @@ Runemastered Rusted Greathelm
 Runemastered Sacrificial Mantle
 Runemastered Sacrificial Regalia
 Runemastered Scale Mail
+Runemastered Scalper's Jacket
 Runemastered Scout's Vest
 Runemastered Sectioned Bracers
 Runemastered Secured Leggings
@@ -1168,12 +1192,15 @@ Runemastered Spiked Buckler
 Runemastered Spined Bracers
 Runemastered Spiral Wraps
 Runemastered Spired Greathelm
+Runemastered Spiritbone Crown
+Runemastered Splintered Tower Shield
 Runemastered Stacked Sabatons
 Runemastered Steel Plate
 Runemastered Stitched Gloves
 Runemastered Stocky Mitts
 Runemastered Stone Greaves
 Runemastered Straw Sandals
+Runemastered Strider Vest
 Runemastered Studded Greatclub
 Runemastered Studded Vest
 Runemastered Suede Bracers
@@ -1184,6 +1211,7 @@ Runemastered Tense Crossbow
 Runemastered Threaded Shoes
 Runemastered Tideseer Mantle
 Runemastered Titan Mitts
+Runemastered Tonal Focus
 Runemastered Torment Club
 Runemastered Torn Gloves
 Runemastered Tribal Mask
@@ -1192,6 +1220,7 @@ Runemastered Twig Circlet
 Runemastered Twig Focus
 Runemastered Utility Wraps
 Runemastered Vaal Cuirass
+Runemastered Vaal Tower Shield
 Runemastered Vagabond Armour
 Runemastered Veiled Mask
 Runemastered Velour Shoes
@@ -1202,6 +1231,7 @@ Runemastered Verisium Cuffs
 Runemastered Vermeil Circlet
 Runemastered Viper Cap
 Runemastered Visored Helm
+Runemastered Voodoo Focus
 Runemastered Votive Raiment
 Runemastered Warding Quarterstaff
 Runemastered Warrior Greathelm
