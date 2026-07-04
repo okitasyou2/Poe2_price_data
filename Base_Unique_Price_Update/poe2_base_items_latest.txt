@@ -1001,6 +1001,7 @@ Runeforged Wanderer Shoes
 Runeforged War Spear
 Runeforged War Wraps
 Runeforged Warded Helm
+Runeforged Warden Bow
 Runeforged Warlock Leggings
 Runeforged Warlord Cuirass
 Runeforged Warmonger Greathelm
